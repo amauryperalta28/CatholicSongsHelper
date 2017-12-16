@@ -6,14 +6,14 @@
 -->
 <ion-header>
 
-  <ion-navbar  [color]="isAndroid ? 'royal' : 'primary'">
+  <ion-navbar [color]="isAndroid ? 'royal' : 'primary'">
     <ion-title>Misas</ion-title>
-
-    <ion-buttons end>
-      <button ion-button navPush="AddEucharistPage">
+    <ion-fab right middle>
+      <button ion-fab mini navPush="AddEucharistPage">
         <ion-icon name="add"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-fab>
+
   </ion-navbar>
 
 </ion-header>

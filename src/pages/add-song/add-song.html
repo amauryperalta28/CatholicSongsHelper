@@ -25,7 +25,7 @@
 
   <ion-item>
     <ion-label>Momento misa</ion-label>
-    <ion-select>
+    <ion-select *ngFor="let moment of moments">
       <ion-option value="1">Entrada</ion-option>
       <ion-option value="2">Piedad</ion-option>
       <ion-option value="3">Gloria</ion-option>
@@ -39,5 +39,5 @@
     </ion-select>
   </ion-item>
 
-  <button ion-button block clear>Crear</button>
+  <button ion-button block clear (click)="saveSong()">Crear</button>
 </ion-content>

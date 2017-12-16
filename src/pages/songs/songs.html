@@ -6,23 +6,24 @@
 -->
 <ion-header>
 
-  <ion-navbar  [color]="isAndroid ? 'royal' : 'primary'">
+  <ion-navbar [color]="isAndroid ? 'royal' : 'primary'">
     <ion-title>Cantos</ion-title>
-    <ion-buttons end>
-      <button ion-button navPush="AddSongPage">
+    <ion-fab right middle>
+      <button ion-fab mini navPush="AddSongPage">
         <ion-icon name="add"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-fab>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-    <ion-list>
-        <button ion-item *ngFor="let song of songs" (click)="goToDetail(song)">
-          {{ song.title }}
-        </button> 
-      </ion-list>
+  <ion-list>
+    <button ion-item *ngFor="let song of songs" (click)="goToDetail(song)">
+      {{ song.title }}
+      <ion-badge>{{getMomentName(song.eucharistMoment)}}</ion-badge>
+    </button>
+  </ion-list>
 
 </ion-content>
