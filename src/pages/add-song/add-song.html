@@ -24,18 +24,14 @@
   </ion-item>
 
   <ion-item>
+    <ion-label>Tonos:</ion-label>
+    <ion-textarea placeholder="Inserta los tonos del canto"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
     <ion-label>Momento misa</ion-label>
-    <ion-select *ngFor="let moment of moments">
-      <ion-option value="1">Entrada</ion-option>
-      <ion-option value="2">Piedad</ion-option>
-      <ion-option value="3">Gloria</ion-option>
-      <ion-option value="4">Aclamación</ion-option>
-      <ion-option value="5">Ofertorio</ion-option>
-      <ion-option value="6">Santo</ion-option>
-      <ion-option value="7">Paz</ion-option>
-      <ion-option value="8">Cordero</ion-option>
-      <ion-option value="9">Comunión</ion-option>
-      <ion-option value="10">Final</ion-option>
+    <ion-select>
+      <ion-option *ngFor="let moment of moments" [value]="moment.id">{{moment.description}}</ion-option>
     </ion-select>
   </ion-item>
 

@@ -24,8 +24,8 @@ export class SongsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.songs = [
-      { title: "Vienen con Alegria", eucharistMoment: 1 },
-      { title: "Demos gracias al señor", eucharistMoment: 1 }
+      { title: "Vienen con Alegria", eucharistMoment: 1,chords:'La- Sol+ Fa+' },
+      { title: "Demos gracias al señor", eucharistMoment: 10,chords:'La- Sol+ Fa+'}
     ];
   }
 

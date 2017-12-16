@@ -19,7 +19,7 @@ export class AddSongPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private toastCtrl: ToastController) {
     let mom = new EucharistMoment();
-    //this.moments = mom.getAll();
+    this.moments = mom.getAll();
 
   }
 

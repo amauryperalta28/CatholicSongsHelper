@@ -2,6 +2,7 @@ export class song {
   key?: string;
   title: string;
   eucharistMoment: number;
+  chords: string;
 
   constructor(title: string, moment: number) {
     this.title = title;
