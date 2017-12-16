@@ -19,5 +19,10 @@
 
 
 <ion-content padding>
+    <ion-list>
+        <button ion-item *ngFor="let song of songs" (click)="goToDetail(song)">
+          {{ song.title }}
+        </button> 
+      </ion-list>
 
 </ion-content>
