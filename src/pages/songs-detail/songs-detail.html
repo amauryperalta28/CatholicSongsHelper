@@ -6,13 +6,32 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>songs-detail</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>songs-detail</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <ion-item>
+        <ion-label>Titulo:</ion-label>
+        <ion-input type="text" disabled [value]="song.title"></ion-input>
+    </ion-item>
 
+    <ion-item>
+        <ion-label>Trozo canto:</ion-label>
+        <ion-textarea disabled placeholder="Inserta un trozo del canto"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Tonos:</ion-label>
+        <ion-textarea disabled [value]="song.chords"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Momento misa</ion-label>
+        <ion-textarea disabled [value]="momentDescription"></ion-textarea>
+
+    </ion-item>
 </ion-content>

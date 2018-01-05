@@ -17,4 +17,28 @@ export class EucharistMoment{
     getAll(){
         return this.moments;
     }
+
+    getMomentName(moment: number) {
+        if (moment == 1) {
+          return "Entrada";
+        } else if (moment == 2) {
+          return "Piedad";
+        } else if (moment == 3) {
+          return "Gloria";
+        } else if (moment == 4) {
+          return "Aclamacion";
+        } else if (moment == 5) {
+          return "Ofertorio";
+        } else if (moment == 6) {
+          return "Santo";
+        } else if (moment == 7) {
+          return "Paz";
+        } else if (moment == 8) {
+          return "Cordero";
+        } else if (moment == 9) {
+          return "Comunion";
+        } else if (moment == 10) {
+          return "Final";
+        }
+      }
 }

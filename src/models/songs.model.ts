@@ -4,8 +4,9 @@ export class song {
   eucharistMoment: number;
   chords: string;
 
-  constructor(title: string, moment: number) {
+  constructor(title: string, moment: number, chords: string) {
     this.title = title;
     this.eucharistMoment = moment;
+    this.chords = chords;
   }
 }

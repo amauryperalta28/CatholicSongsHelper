@@ -6,6 +6,7 @@ import {
   ToastController
 } from "ionic-angular";
 import { song } from "../../models/songs.model";
+import { SongsDetailPage } from "../songs-detail/songs-detail";
 
 /**
  * Generated class for the SongsPage page.
@@ -24,13 +25,17 @@ export class SongsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.songs = [
-      { title: "Vienen con Alegria", eucharistMoment: 1,chords:'La- Sol+ Fa+' },
-      { title: "Demos gracias al señor", eucharistMoment: 10,chords:'La- Sol+ Fa+'}
+      { key: '1', title: "Vienen con Alegria", eucharistMoment: 1,chords:'La- Sol+ Fa+' },
+      {  key: '2', title: "Demos gracias al señor", eucharistMoment: 10,chords:'La- Sol+ Fa+'}
     ];
   }
 
   ionViewDidLoad() {
     console.log("ionViewDidLoad SongsPage");
+  }
+
+  goToDetail(songID){
+     this.navCtrl.push(SongsDetailPage,{ songId: songID });
   }
 
   getMomentName(moment: number) {

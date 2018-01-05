@@ -11,6 +11,7 @@ import { EucharistPage } from '../pages/eucharist/eucharist';
 import { SongsDetailPageModule } from '../pages/songs-detail/songs-detail.module';
 import { AddEucharistPageModule } from '../pages/add-eucharist/add-eucharist.module';
 import { EucharistDetailPageModule } from '../pages/eucharist-detail/eucharist-detail.module';
+import { SongsProvider } from '../providers/songs/songs';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { EucharistDetailPageModule } from '../pages/eucharist-detail/eucharist-d
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SongsProvider
   ]
 })
 export class AppModule {}
